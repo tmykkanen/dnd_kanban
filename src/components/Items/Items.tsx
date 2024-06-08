@@ -2,6 +2,7 @@ import { UniqueIdentifier } from '@dnd-kit/core'
 import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
 import clsx from 'clsx'
+import { Button } from '../ui/button.tsx'
 
 type ItemsType = {
   id: UniqueIdentifier;
@@ -39,12 +40,12 @@ const Items = ({ id, title}: ItemsType) => {
    >
     <div className='flex items-center justify-between'>
       {title}
-      <button
+      <Button
       className='border p-2 text-xs rounded-xl shadow-lg hover:shadow-xl'
       {...listeners}
       >
         Drag Handle
-      </button>
+      </Button>
     </div>
    </div>
  )
